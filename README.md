@@ -21,13 +21,22 @@ It follows a layered architecture—Controllers, DTOs, Models, Views, Enums, Hel
 ## 📁 Project Structure
 
 CodeReviews.Console.Flashcards/
-├── Controllers/ # Orchestrate user input and app logic
-├── DTO/ # Data Transfer Objects for serialization/persistence
-├── Models/ # Domain entities: Flashcard, Deck, Stats
-├── Views/ # Console-based UI & menus
-├── Enums/ # Enums for statuses or difficulty
-├── Helpers/ # Utility functions: I/O, parsing, formatting
-├── Program.cs # Entry point
+│
+
+├── Controllers/ # Handles program logic and user interactions
+
+├── DTO/ # Data Transfer Objects for file persistence
+
+├── Models/ # Core entities like Flashcard and Deck
+
+├── Views/ # Handles all console output and UI prompts
+
+├── Enums/ # Enum definitions (e.g., difficulty, status)
+
+├── Helpers/ # Utility methods (e.g., file handling)
+
+├── Program.cs # Application entry point
+
 └── CodeReviews.Console.Flashcards.csproj
 
 ---
