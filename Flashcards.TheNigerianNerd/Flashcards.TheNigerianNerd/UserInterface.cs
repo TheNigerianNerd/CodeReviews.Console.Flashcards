@@ -1,5 +1,4 @@
 ﻿using Flashcards.TheNigerianNerd.Models;
-using Microsoft.Data.SqlClient;
 using Spectre.Console;
 using static Flashcards.TheNigerianNerd.Enums;
 
@@ -145,7 +144,7 @@ internal class UserInterface
 
         Table table = new Table();
         table.AddColumns("Id", "Name");
-        foreach ( Stack stack in stacks)
+        foreach (Stack stack in stacks)
         {
             table.AddRow(stack.Id.ToString(), stack.Name);
         }
@@ -257,10 +256,11 @@ internal class UserInterface
         //    .AddChoices(flashCardsArray)
         //    );
         var table = new Table();
-        
-        table.AddColumns("Question","Answer", "Stack Name");
-        
-        foreach (var flashcardDTO in flashCards) { 
+
+        table.AddColumns("Question", "Answer", "Stack Name");
+
+        foreach (var flashcardDTO in flashCards)
+        {
             table.AddRow(flashcardDTO.Question, flashcardDTO.Answer, flashcardDTO.StackName);
         }
         AnsiConsole.Write(table);

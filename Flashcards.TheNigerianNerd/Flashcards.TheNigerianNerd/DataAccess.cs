@@ -119,7 +119,7 @@ public class DataAccess
                 return flashcards;
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine($"Error retrieving flashcards {ex.Message}");
             return new List<FlashcardDTO>();
@@ -282,7 +282,8 @@ public class DataAccess
     }
     internal void InsertStudySession(StudySession session)
     {
-        try {
+        try
+        {
             using (SqlConnection connection = new(ConnectionString))
             {
                 connection.Open();
@@ -294,15 +295,17 @@ public class DataAccess
             }
 
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine($"There was a problem with the study session: {ex.Message}");
         }
     }
     internal List<StudySessionDTO> GetStudySessionData()
     {
-        try {
-            using (SqlConnection connection = new(ConnectionString)) { 
+        try
+        {
+            using (SqlConnection connection = new(ConnectionString))
+            {
                 connection.Open();
 
                 string sql = @"
@@ -319,7 +322,7 @@ public class DataAccess
                 return connection.Query<StudySessionDTO>(sql).ToList();
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine("Unable to select study session data.");
             return new List<StudySessionDTO>();
